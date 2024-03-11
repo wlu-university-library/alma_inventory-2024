@@ -336,7 +336,8 @@ if (isset($_POST['submit'])) {
 
                 $location = $_POST['location'];
                 if ($sortednk[$key]['location'] != $location) {
-                    $locationProblem = "**WRONG LOCATION: " . $sortednk[$key]['location'] . "**<BR>";
+                  //  $locationProblem = "**WRONG LOCATION: " . $sortednk[$key]['location'] . "**<BR>";
+                  $locationProblem = "" . $sortednk[$key]['location'] . "**<BR>";
                     $locationProblemCount += 1;
                     $problem = true;
                 } else {
