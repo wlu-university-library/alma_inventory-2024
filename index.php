@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <?php require("login.php");
 
+
+if (session_status() == PHP_SESSION_NONE) {
+  session_start();
+}
+$_SESSION['progress'] = 0;
+session_write_close();
+
+
+
+/*
 if(!isset($_SESSION))
     {
         session_start();
     }
     $_SESSION['progress']=0;
     session_write_close();
+*/
   ?>
 <html lang="en">
   <head>
