@@ -118,6 +118,12 @@ if (isset($_POST['submit'])) {
         //load callNumber array and sort for printing below
         //Rows in sheet 1
         $row=1;
+        if (!is_array($rows) && !is_object($rows)) {
+          // Handle the case where no rows are returned or there's an error
+          echo "Error reading rows from the XLSX file or the file is empty.";
+          // Optionally, initialize $rows to an empty array to safely skip the foreach loop
+          $rows = array(); // Only do this if it's appropriate for your application logic
+      }
         foreach( $xlsx->rows() as $k => $r ) {
           // Start the session when using it. Not before or out of the loop. Remember that you are only using it to store the % of progress.
            session_start();
