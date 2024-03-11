@@ -118,6 +118,11 @@ if (isset($_POST['submit'])) {
         //load callNumber array and sort for printing below
         //Rows in sheet 1
         $row=1;
+        // Initialize $rows as an empty array to ensure it's always defined
+        $rows = array();
+      // Then, attempt to populate $rows with actual data
+        $rows = $xlsx->rows();
+
         if (!is_array($rows) && !is_object($rows)) {
           // Handle the case where no rows are returned or there's an error
           echo "Error reading rows from the XLSX file or the file is empty.";
@@ -384,7 +389,8 @@ if (isset($_POST['submit'])) {
           	$shelflist_obj->correct_location = $correct_loc;
           	$shelflist_obj->call_number = $sortednk[$key]['call_number'];
             $shelflist_obj->norm_call_number = $sortednk[$key]['call_sort'];
-            $shelflist_obj->title = utf8_encode (substr($sortednk[$key]['title'], 0, 40) . '...');
+           // $shelflist_obj->title = utf8_encode (substr($sortednk[$key]['title'], 0, 40) . '...');
+           $shelflist_obj->title =  substr($sortednk[$key]['title'], 0, 40) . '...';
             $shelflist_obj->scanned_location = $scan_loc;
             $shelflist_obj->problem_list = $orderProblem . $cnTypeProblem . $nipProblem . $tempProblem . $libraryProblem . $locationProblem . $policyProblem . $typeProblem;
             $shelflist_obj->barcode = $sortednk[$key]['item_barcode'];
