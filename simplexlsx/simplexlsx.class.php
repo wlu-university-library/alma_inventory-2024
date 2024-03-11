@@ -68,6 +68,8 @@ class SimpleXLSX {
 	private $sharedstrings;
 	private $error = false;
 	private $debug = false;
+	private $datasec = array();
+	
 	// scheme
 	const SCHEMA_REL_OFFICEDOCUMENT  =  'http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument';
 	const SCHEMA_REL_SHAREDSTRINGS =  'http://schemas.openxmlformats.org/officeDocument/2006/relationships/sharedStrings';
