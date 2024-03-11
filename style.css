@@ -1,0 +1,13 @@
+.spacer {
+	margin-top: 2rem;
+}
+
+.bordered {
+	border: 1px solid #ddd;
+	padding: 0;
+	border-radius: 3px;
+}
+
+.bordered a {
+	margin-right: 1.5rem;
+}
