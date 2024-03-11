@@ -1,24 +1,24 @@
-<!DOCTYPE html>
 <?php require("login.php");
 
-
+/*
 if (session_status() == PHP_SESSION_NONE) {
   session_start();
 }
 $_SESSION['progress'] = 0;
 session_write_close();
 
+*/
 
 
-/*
 if(!isset($_SESSION))
     {
         session_start();
     }
     $_SESSION['progress']=0;
     session_write_close();
-*/
+
   ?>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!--
@@ -199,6 +199,7 @@ $(document).ready(function() {
             }
 
 </script>
+
 <!-- End progress Ajax js -->
   <!-- The following style code is NOT necessary; just some styling to center the form on the page and set the default font size -->
   <style type="text/css">
