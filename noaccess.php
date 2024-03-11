@@ -5,7 +5,7 @@ echo $user . " ";
 
 // logout if desired
 if (isset($_REQUEST['logout'])) {
-phpCAS::logout(['url' =>  'https://apps.lib.purdue.edu/alma/inventory/index.php']);
+phpCAS::logout(['url' =>  'https://alma.wludci.info/inventory/index.php']);
 }
 ?>
 
@@ -15,6 +15,6 @@ phpCAS::logout(['url' =>  'https://apps.lib.purdue.edu/alma/inventory/index.php'
 </head>
 <body>
 <a href="?logout=">Logout</a><BR>
-You do not have access to this application.  Email dlingley @ purdue if you feel this is an error.
+You do not have access to this application.  
 </body>
 </html>
