@@ -1,5 +1,5 @@
 <?php
-require('CAS.php');
+//require('CAS.php');
 
 echo $user . " ";
 
