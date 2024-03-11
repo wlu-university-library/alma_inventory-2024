@@ -443,7 +443,7 @@ p[data-value]:after {
 </div>
     <div class="reformed-form">
       <h1>Inventory Report <small>Fill in form and submit</small></h1>
-    	<form method="post" name="ShelfLister" id="ShelfLister" action="<?php echo 'http://' . $_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']) . '/process_barcodes.php'; ?>" enctype="multipart/form-data">
+    	<form method="post" name="ShelfLister" id="ShelfLister" action="<?php echo 'https://' . $_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']) . '/process_barcodes.php'; ?>" enctype="multipart/form-data">
 			<input type="hidden" name="cnType" value="lc">
 			<input type="hidden" name="itemType" value="BOOK">
 			<input type="hidden" name="policy" value="UniqueLocations">
