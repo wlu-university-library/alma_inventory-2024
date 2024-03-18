@@ -339,7 +339,7 @@ if (isset($_POST['submit'])) {
                   //  $locationProblem = "**WRONG LOCATION: " . $sortednk[$key]['location'] . "**<BR>";
                  // $locationProblem = "" . $sortednk[$key]['location'] . "**<BR>";
                  //remove location and **<br> from print out 
-                 $locationProblem = "" . $sortednk[$key]['location'] . "**<BR>";
+                 $locationProblem = "" . $sortednk[$key][''] . "";
                     $locationProblemCount += 1;
                     $problem = true;
                 } else {
