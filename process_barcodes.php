@@ -343,7 +343,8 @@ if (isset($_POST['submit'])) {
                 } else {
                     $requestProblem = '';
                 }
-
+//test removal of correction location by removing this code until $library
+/*
                 $location = $_POST['location'];
                 if ($sortednk[$key]['location'] != $location) {
                   //  $locationProblem = "**WRONG LOCATION: " . $sortednk[$key]['location'] . "**<BR>";
@@ -355,6 +356,7 @@ if (isset($_POST['submit'])) {
                 } else {
                     $locationProblem = '';
                 }
+                */
                 $library = $_POST['library'];
                 if ($sortednk[$key]['library'] != $library) {
                     $libraryProblem = "**WRONG LIBRARY: " . $sortednk[$key]['library'] . "**<BR>";
