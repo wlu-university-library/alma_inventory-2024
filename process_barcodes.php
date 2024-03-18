@@ -1,3 +1,13 @@
+<?php
+// Start the session at the very beginning of the file
+session_start();
+
+// Include any necessary PHP files and perform initial PHP logic here
+// For example, requiring PHP dependencies or initializing variables
+// This is also where you could update the session with initial values if needed
+
+// Now that PHP processing that needs to happen before outputting HTML is done, you can start your HTML
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -131,7 +141,7 @@ if (isset($_POST['submit'])) {
       }
         foreach( $xlsx->rows() as $k => $r ) {
           // Start the session when using it. Not before or out of the loop. Remember that you are only using it to store the % of progress.
-           session_start();
+        //   session_start();
             //Skip First row
             if ($k == 0) {
               //Check that first cell is header "barcodes"
